@@ -101,8 +101,8 @@ const search = function (data) {
   } else {
     $('#message').text(results.length + ' results matching ' + data.terms + ' in your collection.')
   }
-  const form = document.getElementById('search')
-  form.reset()
+  const form = document.getElementById('searchField')
+  form.value = ''
   $('#searchModal').modal('hide')
   hide.toggleClearSearch()
   hide.toggleAdd()
@@ -110,7 +110,11 @@ const search = function (data) {
 
 const onSearch = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
+  const terms = document.getElementById('searchField').value
+  const data = {
+    terms: terms
+  }
+  console.log(data)
   search(data)
 }
 
@@ -123,13 +127,29 @@ const onClearSearch = function () {
   $('#message').html('<br>')
 }
 
+const onReadNext = function () {
+  const onDeck = []
+  for (let i = 0; i < store.books.length; i++) {
+    if (store.books[i].next) {
+      onDeck.push(store.books[i])
+    }
+  }
+  const booksHtml = booksTemplate({ books: onDeck })
+  $('.content').text('')
+  $('.content').append(booksHtml)
+  hide.toggleClearSearch()
+  hide.toggleAdd()
+}
+
 const addHandlers = () => {
   $('#add-book').on('submit', onAddBook)
   $('#content').on('click', '#delete-book', onDeleteBook)
   $('#content').on('click', '#edit-book', openEdit)
   $('#edit-book').on('submit', onEditBook)
-  $('#search').on('submit', onSearch)
+  $('#searchButton').on('click', onSearch)
+  // $('#search').on('submit', onSearch)
   $('#clearSearch').on('click', onClearSearch)
+  $('#showReadNext').on('click', onReadNext)
 }
 
 module.exports = {
