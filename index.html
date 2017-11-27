@@ -41,17 +41,33 @@
               </li>
             </ul> -->
             <ul class="nav navbar-nav navbar-right">
-  <li class="hidden" id="showPass"><a href="#" data-toggle="modal" data-target="#passwordModal">Change Password</a></li>
-  <li class="hidden" id="signout"><a href="#" id="sign-out" class="signOutLink">Sign Out</a></li>
-  <li class="unhidden" id="showLogin" ><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-  <li class="unhidden" id="signup"><a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
-</ul>
+              <li class="hidden" id="showPass"><a href="#" data-toggle="modal" data-target="#passwordModal">Change Password</a></li>
+              <li class="hidden" id="signout"><a href="#" id="sign-out" class="signOutLink">Sign Out</a></li>
+              <li class="unhidden" id="showLogin" ><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+              <li class="unhidden" id="signup"><a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+            </ul>
           </div><!--/.nav-collapse -->
+        </div>
+        <div class="message-bar container-fluid">
+          <div id="message">
+            Test Message
+          </div>
         </div>
       </div>
       <div class="content-area">
 
         <div class="row content" id="content">
+        </div>
+
+        <div class="panel panel-primary showForUser" id="bookPanel">
+          <div class="panel-heading"><h4>Add a Book:</h4></div>
+          <div class="panel-body">
+            <form class="form-inline" id="add-album">
+              <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Book Title">
+              <span class="form-name">Author: </span><input type="text" name="book[author]"class="form-control" id="inlineFormInput" placeholder="Author">
+              <button type="submit" name="submit" class="btn btn-primary">Add To Your Stack</button>
+            </form>
+          </div>
         </div>
 
         <h1>Example</h1>
@@ -136,13 +152,13 @@
           <div class="modal-dialog">
           <div class="modal-content">
                <div class="modal-header">
-                <h2 class="modal-title edit-title">Edit Album</h2>
+                <h2 class="modal-title edit-title">Edit Book</h2>
                 <span id="edit-message" class="edit-message"></span>
                </div>
-            <form id="edit-album">
-            <input type="text" name="album[title]" id="edit-title" class="form-control" value="Edit Title">
-            <input type="text" name="album[artist]" id="edit-artist" class="form-control" value="Edit Artist">
-            <textarea rows="3" name="album[notes]" id="edit-notes" class="form-control editfield" placeholder="Add Notes"></textarea>
+            <form id="edit-book">
+            <input type="text" name="book[title]" id="edit-title" class="form-control" value="Edit Title">
+            <input type="text" name="book[author]" id="edit-author" class="form-control" value="Edit Artist">
+            <textarea rows="3" name="book[notes]" id="edit-notes" class="form-control editfield" placeholder="Add Notes"></textarea>
              <div class="modal-body">
                <br>
              </div>

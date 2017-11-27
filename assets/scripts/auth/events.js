@@ -23,11 +23,6 @@ const onSignIn = (event) => {
     .then(hide.togglePassword)
     .then(hide.toggleSignout)
     .then(hide.toggleSignup)
-    .then(hide.togglePanel)
-    .then(hide.toggleAlbumFields)
-    .then(api.populate)
-    .then(ui.populateSuccess)
-    .then(ui.albumCount)
     .catch(ui.signInFailure)
 }
 
@@ -40,7 +35,7 @@ const onSignOut = (event) => {
     .then(hide.toggleSignout)
     .then(hide.toggleSignup)
     .then(hide.togglePanel)
-    .then(hide.toggleAlbumFields)
+    .then(hide.toggleBookFields)
     // .then(ui.carousel)
     .then(document.getElementById('login').reset())
     .catch(ui.signOutFailure)

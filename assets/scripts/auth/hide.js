@@ -18,13 +18,8 @@ const toggleSignup = function () {
   // console.log(parentElement)
 }
 
-const togglePanel = function () {
-  $('#msg-panel').toggleClass('panel-info panel-primary')
-  // console.log(parentElement)
-}
-
-const toggleAlbumFields = function () {
-  $('#albumFields').toggleClass('hidden unhidden')
+const toggleBookFields = function () {
+  $('#bookFields').toggleClass('hidden unhidden')
 }
 
 // const carousel = function () {
@@ -36,6 +31,5 @@ module.exports = {
   togglePassword,
   toggleSignout,
   toggleSignup,
-  togglePanel,
-  toggleAlbumFields
+  toggleBookFields
 }

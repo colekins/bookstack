@@ -15,10 +15,9 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (response) {
   $('#message').text('You\'re now signed in.')
-  // console.log('signIn success ran. data is :', response)
   store.user = response.user
   $('#loginModal').modal('hide')
-  $('#mainheader').text('Your collection:')
+  $('.showForUser').show()
 }
 
 const signInFailure = function (error) {
@@ -29,7 +28,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function () {
   $('#message').text('You\'re now signed out.')
   $('#content').html('')
-  $('#mainheader').text('Sign in to start your collection.')
+  $('.showForUser').hide()
   store.user = null
 }
 

@@ -2,5 +2,25 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 .content-area {
-  padding-top: 66px;
+  padding-top: 88px;
+}
+
+.message-bar{
+  // padding-top: 1px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: lightBlue;
+}
+
+h4 {
+  text-align: center;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+.showForUser {
+  display: none;
 }
