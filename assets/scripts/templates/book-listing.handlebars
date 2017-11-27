@@ -8,11 +8,11 @@
       <div class="panel panel-default">
         <div class="panel-heading"><h3>{{book.title}}</h3><h6>{{book.author}}</h6></div>
         <div class="panel-body">{{#if book.notes}}
-        <p>{{book.notes}}</p>
+        <p></p>
         {{else}}
           <p></p>
         {{/if}}
-          <button id="edit-book" data-toggle="modal" data-target="#editModal" class="btn btn-default">Info</button>
+          <button id="edit-book" data-title="{{book.title}}" data-author="{{book.author}}" data-notes="{{book.notes}}" data-id="{{book.id}}" data-toggle="modal" data-target="#editModal" class="btn btn-default">Info</button>
           <button id="delete-book" data-id="{{book.id}}" class="btn btn-default">Delete</button>
         </div>
     </div>
