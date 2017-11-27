@@ -43,19 +43,20 @@ const changePassword = function (data) {
   })
 }
 
-// const populate = function () {
-//   return $.ajax({
-//     url: config.apiOrigin + '/albums/',
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     }
-//   })
-// }
+const populate = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/books/',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   signOut,
-  changePassword
+  changePassword,
+  populate
 }

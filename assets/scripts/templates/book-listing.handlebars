@@ -1,0 +1,20 @@
+{{#each books as |book|}}
+
+  <!--
+  Don't uncomment yet -->
+
+ <!-- Developers, why are we using data-id and not just id? -->
+  <div class="col-md-3 col-sm-4 {{book.id}}" data-id="{{book.id}}">
+      <div class="panel panel-default">
+        <div class="panel-heading"><h3>{{book.title}}</h3><h6>{{book.author}}</h6></div>
+        <div class="panel-body">{{#if book.notes}}
+        <p>{{book.notes}}</p>
+        {{else}}
+          <p></p>
+        {{/if}}
+          <button id="edit-book" data-toggle="modal" data-target="#editModal" class="btn btn-default">Info</button>
+          <button id="delete-book" class="btn btn-default">Delete</button>
+        </div>
+    </div>
+  </div>
+{{/each}}

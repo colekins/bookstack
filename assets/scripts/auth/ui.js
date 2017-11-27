@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const booksTemplate = require('../templates/book-listing.handlebars')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully! Please sign in.')
@@ -48,27 +49,11 @@ const changePasswordFailure = function (error) {
   console.log('changePassword failure ran. error is :', error)
 }
 
-// const albumCover = function (id, img) {
-//   const panel = document.getElementsByClassName(id)
-//   const albImage = document.createElement('img')
-//   albImage.src = (img)
-//   $(panel).find('p').append(albImage)
-// }
-
-// const populateSuccess = function (data) {
-//   store.albums = data.albums
-//   const albumsHtml = albumsTemplate({ albums: store.albums })
-//   $('.content').append(albumsHtml)
-//   for (let i = 0; i < store.albums.length; i++) {
-//     const artist = store.albums[i].artist
-//     const title = store.albums[i].title
-//     art(artist, title, 'large', function (err, url) {
-//       store.albums[i].image = url
-//       const error = err
-//       albumCover(store.albums[i].id, store.albums[i].image)
-//     })
-//   }
-// }
+const populateSuccess = function (data) {
+  store.books = data.books
+  const booksHtml = booksTemplate({ books: store.books })
+  $('.content').append(booksHtml)
+}
 //
 // const albumCount = function () {
 //   if (store.albums.length === 0) {
@@ -87,5 +72,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   changePasswordSuccess,
-  changePasswordFailure
+  changePasswordFailure,
+  populateSuccess
 }

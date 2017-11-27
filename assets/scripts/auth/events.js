@@ -23,6 +23,8 @@ const onSignIn = (event) => {
     .then(hide.togglePassword)
     .then(hide.toggleSignout)
     .then(hide.toggleSignup)
+    .then(api.populate)
+    .then(ui.populateSuccess)
     .catch(ui.signInFailure)
 }
 

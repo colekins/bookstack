@@ -56,18 +56,18 @@
       </div>
       <div class="content-area">
 
-        <div class="row content" id="content">
-        </div>
-
         <div class="panel panel-primary showForUser" id="bookPanel">
           <div class="panel-heading"><h4>Add a Book:</h4></div>
           <div class="panel-body">
-            <form class="form-inline" id="add-album">
-              <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Book Title">
+            <form class="form-inline" id="add-book">
+              <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title">
               <span class="form-name">Author: </span><input type="text" name="book[author]"class="form-control" id="inlineFormInput" placeholder="Author">
               <button type="submit" name="submit" class="btn btn-primary">Add To Your Stack</button>
             </form>
           </div>
+        </div>
+
+        <div class="row content" id="content">
         </div>
 
         <h1>Example</h1>
@@ -156,8 +156,8 @@
                 <span id="edit-message" class="edit-message"></span>
                </div>
             <form id="edit-book">
-            <input type="text" name="book[title]" id="edit-title" class="form-control" value="Edit Title">
-            <input type="text" name="book[author]" id="edit-author" class="form-control" value="Edit Artist">
+            <input type="text" name="book[title]" id="edit-title" class="form-control" placeholder="Edit Title">
+            <input type="text" name="book[author]" id="edit-author" class="form-control" placeholder="Edit Author">
             <textarea rows="3" name="book[notes]" id="edit-notes" class="form-control editfield" placeholder="Add Notes"></textarea>
              <div class="modal-body">
                <br>
