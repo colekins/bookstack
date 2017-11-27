@@ -41,6 +41,8 @@
               </li>
             </ul> -->
             <ul class="nav navbar-nav navbar-right">
+              <li class="hidden" id="showReadNext"><a href="#">Read Next</a></li>
+              <li class="hidden" id="showSearch"><a href="#" data-toggle="modal" data-target="#searchModal">Search</a></li>
               <li class="hidden" id="showPass"><a href="#" data-toggle="modal" data-target="#passwordModal">Change Password</a></li>
               <li class="hidden" id="signout"><a href="#" id="sign-out" class="signOutLink">Sign Out</a></li>
               <li class="unhidden" id="showLogin" ><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
@@ -56,8 +58,8 @@
       </div>
       <div class="content-area">
 
-        <div class="panel panel-primary showForUser" id="bookPanel">
-          <div class="panel-heading"><h4>Add a Book:</h4></div>
+        <div class="panel panel-success showForUser" id="bookPanel">
+          <div class="panel-heading panel-manage"><h4>Manage Your BookStack</h4></div>
           <div class="panel-body">
             <form class="form-inline" id="add-book">
               <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title">
@@ -146,23 +148,38 @@
                 <span id="edit-message" class="edit-message"></span>
                </div>
             <form id="edit-book">
-            <input type="text" name="book[title]" id="edit-title" class="form-control" placeholder="Edit Title">
-            <input type="text" name="book[author]" id="edit-author" class="form-control" placeholder="Edit Author">
-            <textarea rows="3" name="book[notes]" id="edit-notes" class="form-control editfield" placeholder="Add Notes"></textarea>
-            <label class="form-control"><input type="checkbox" id="edit-next" name="optradio">   Read Next</label>
-            <input type="hidden" name="book[next]" id="edit-hidden" value=0>
-             <div class="modal-body">
-               <br>
-             </div>
-             <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-               <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-             </div>
+              <input type="text" name="book[title]" id="edit-title" class="form-control" placeholder="Edit Title">
+              <input type="text" name="book[author]" id="edit-author" class="form-control" placeholder="Edit Author">
+              <textarea rows="3" name="book[notes]" id="edit-notes" class="form-control editfield" placeholder="Add Notes"></textarea>
+              <label class="form-control"><input type="checkbox" id="edit-next" name="optradio">   Read Next</label>
+              <input type="hidden" name="book[next]" id="edit-hidden" value=0>
+               <div class="modal-body">
+                 <br>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                 <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+               </div>
             </form>
           </div>
         </div>
        </div>
+       <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+          <div class="modal-content">
+               <div class="modal-header">
+                <h2 class="modal-title edit-title">Search</h2>
+                <span id="edit-message" class="edit-message"></span>
+               </div>
+                <form id="search">
+                 <span class="form-name"></span><input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title or Author">
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                     <button type="submit" name="submit" class="btn btn-primary">Search</button>
+                   </div>
+               </form>
+          </div>
+        </div>
+       </div>
    </body>
-</html>
-    </body>
 </html>

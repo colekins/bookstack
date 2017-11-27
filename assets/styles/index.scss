@@ -8,17 +8,27 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 .message-bar{
   // padding-top: 1px;
   text-align: center;
-  font-size: 17px;
+  font-size: 19px;
   font-weight: bold;
-  background-color: lightBlue;
+  color: white;
+  background-color: #428bca;
 }
 
 h4 {
   text-align: center;
+  margin-top: -4px;
 }
 
-.panel-body {
+.panel {
   text-align: center;
+}
+
+.panel-manage {
+  height: 32px;
+}
+
+.search {
+  display: none;
 }
 
 .showForUser {
