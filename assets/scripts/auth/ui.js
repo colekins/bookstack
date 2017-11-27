@@ -19,6 +19,7 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('#loginModal').modal('hide')
   $('.showForUser').show()
+  $('#username').text(response.user.email)
 }
 
 const signInFailure = function (error) {
