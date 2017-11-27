@@ -30,6 +30,14 @@ const toggleReadNext = function () {
   $('#showReadNext').toggleClass('hidden unhidden')
 }
 
+const toggleClearSearch = function () {
+  $('#clearSearch').toggleClass('hidden unhidden')
+}
+
+const toggleAdd = function () {
+  $('#add-book').toggleClass('hidden unhidden')
+}
+
 // const carousel = function () {
 //   $('#coverSlide').toggleClass('hidden unhidden')
 // }
@@ -41,5 +49,7 @@ module.exports = {
   toggleSignup,
   toggleBookFields,
   toggleSearch,
-  toggleReadNext
+  toggleReadNext,
+  toggleClearSearch,
+  toggleAdd
 }

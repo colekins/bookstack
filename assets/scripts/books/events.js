@@ -4,6 +4,9 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
 const store = require('../store')
+const hide = require('../auth/hide')
+
+const booksTemplate = require('../templates/book-listing.handlebars')
 
 const onAddBook = function (event) {
   event.preventDefault()
@@ -81,11 +84,52 @@ const onEditBook = function (event) {
   //   .catch(ui.addBookFail)
 }
 
+const search = function (data) {
+  const results = []
+  for (let i = 0; i < store.books.length; i++) {
+    if (store.books[i].title.toUpperCase().indexOf(data.terms.toUpperCase()) >= 0 ||
+        store.books[i].author.toUpperCase().indexOf(data.terms.toUpperCase()) >= 0) {
+      results.push(store.books[i])
+    }
+  }
+  console.log(results)
+  const booksHtml = booksTemplate({ books: results })
+  $('.content').text('')
+  $('.content').append(booksHtml)
+  if (results.length === 1) {
+    $('#message').text('One result matching ' + data.terms + ' in your collection.')
+  } else {
+    $('#message').text(results.length + ' results matching ' + data.terms + ' in your collection.')
+  }
+  const form = document.getElementById('search')
+  form.reset()
+  $('#searchModal').modal('hide')
+  hide.toggleClearSearch()
+  hide.toggleAdd()
+}
+
+const onSearch = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  search(data)
+}
+
+const onClearSearch = function () {
+  const booksHtml = booksTemplate({ books: store.books })
+  $('.content').text('')
+  $('.content').append(booksHtml)
+  hide.toggleClearSearch()
+  hide.toggleAdd()
+  $('#message').html('<br>')
+}
+
 const addHandlers = () => {
   $('#add-book').on('submit', onAddBook)
   $('#content').on('click', '#delete-book', onDeleteBook)
   $('#content').on('click', '#edit-book', openEdit)
   $('#edit-book').on('submit', onEditBook)
+  $('#search').on('submit', onSearch)
+  $('#clearSearch').on('click', onClearSearch)
 }
 
 module.exports = {

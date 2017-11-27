@@ -59,7 +59,7 @@
         </div>
         <div class="message-bar container-fluid">
           <div id="message">
-            Test Message
+            <br>
           </div>
         </div>
       </div>
@@ -68,11 +68,12 @@
         <div class="panel panel-success showForUser" id="bookPanel">
           <div class="panel-heading panel-manage"><h4>Manage Your BookStack</h4></div>
           <div class="panel-body">
-            <form class="form-inline" id="add-book">
+            <form class="form-inline unhidden" id="add-book">
               <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title">
               <span class="form-name">Author: </span><input type="text" name="book[author]"class="form-control" id="inlineFormInput" placeholder="Author">
               <button type="submit" name="submit" class="btn btn-primary">Add To Your Stack</button>
             </form>
+            <button type="submit" id="clearSearch" name="submit" class="btn btn-info hidden">Clear Search Results</button>
           </div>
         </div>
 
@@ -179,7 +180,7 @@
                 <span id="edit-message" class="edit-message"></span>
                </div>
                 <form id="search">
-                 <span class="form-name"></span><input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title or Author">
+                 <span class="form-name"></span><input type="text" name="terms" class="form-control" id="inlineFormInput" placeholder="Title or Author">
                    <div class="modal-footer">
                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                      <button type="submit" name="submit" class="btn btn-primary">Search</button>

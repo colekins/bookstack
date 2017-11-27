@@ -54,6 +54,7 @@ const populateSuccess = function (data) {
   store.books = data.books
   const booksHtml = booksTemplate({ books: store.books })
   $('.content').append(booksHtml)
+  $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
 }
 //
 // const albumCount = function () {
