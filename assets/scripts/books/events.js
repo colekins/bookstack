@@ -42,15 +42,30 @@ const openEdit = function (event) {
   document.getElementById('edit-title').value = bookTitle.textContent
   document.getElementById('edit-author').value = bookAuthor.textContent
   const current = store.books.filter(function (book) { return book.id == bookId })
-  console.log('current is, ', current)
-  if (current[0].notes !== undefined) {
+  console.log(current[0])
+  if (current[0].notes) {
     document.getElementById('edit-notes').value = current[0].notes
+  } else {
+    document.getElementById('edit-notes').value = null
+  }
+  if (current[0].next !== true) {
+    document.getElementById('edit-next').checked = false
+  } else {
+    document.getElementById('edit-next').checked = true
   }
 }
 
 const onEditBook = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
+  const boo = document.getElementById('edit-next').checked
+  if (boo !== false) {
+    document.getElementById('edit-hidden').value = 1
+  } else {
+    document.getElementById('edit-hidden').value = 0
+  }
+  data.book.next = boo
+  console.log(data.book)
   const bookTitle = currentPanel.firstChild
   const bookAuthor = bookTitle.nextSibling
   bookTitle.textContent = data.book.title
@@ -59,6 +74,7 @@ const onEditBook = function (event) {
     return book.id
   }).indexOf(parseInt(bookId))
   store.books[index].notes = data.book.notes
+  store.books[index].next = data.book.next
   api.update(data, bookId)
     .then(ui.editBookSuccess)
   //   .then(document.getElementById('add-album').reset())
