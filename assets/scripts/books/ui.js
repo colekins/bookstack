@@ -1,6 +1,10 @@
 const store = require('../store')
 const bookTemplate = require('../templates/new-book.handlebars')
 
+const showClearSearch = function () {
+  $('.search').show()
+}
+
 const addBookSuccess = function (data) {
   const bookHtml = bookTemplate({ books: data })
   store.newBook = data.book
@@ -15,7 +19,20 @@ const editBookSuccess = function (data) {
   $('#editModal').modal('hide')
 }
 
+const searchSuccess = function () {
+  $('#add-book').hide()
+  showClearSearch()
+}
+
+const clearSearch = function () {
+  $('#add-book').show()
+  $('.search').hide()
+  $('#message').html('<br>')
+}
+
 module.exports = {
   addBookSuccess,
-  editBookSuccess
+  editBookSuccess,
+  searchSuccess,
+  clearSearch
 }

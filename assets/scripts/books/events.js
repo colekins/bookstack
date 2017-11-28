@@ -103,9 +103,7 @@ const search = function (data) {
   }
   const form = document.getElementById('searchField')
   form.value = ''
-  $('#searchModal').modal('hide')
-  hide.toggleClearSearch()
-  hide.toggleAdd()
+  ui.searchSuccess()
 }
 
 const onSearch = function (event) {
@@ -114,7 +112,7 @@ const onSearch = function (event) {
   const data = {
     terms: terms
   }
-  console.log(data)
+  // console.log(data)
   search(data)
 }
 
@@ -122,9 +120,7 @@ const onClearSearch = function () {
   const booksHtml = booksTemplate({ books: store.books })
   $('.content').text('')
   $('.content').append(booksHtml)
-  hide.toggleClearSearch()
-  hide.toggleAdd()
-  $('#message').html('<br>')
+  ui.clearSearch()
 }
 
 const onReadNext = function () {

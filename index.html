@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>BookStack</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -81,7 +81,6 @@
         </div>
       </div>
       <div class="content-area">
-
         <div class="panel panel-success showForUser" id="bookPanel">
           <div class="panel-heading panel-manage"><h4>Manage Your BookStack</h4></div>
           <div class="panel-body">
@@ -90,10 +89,9 @@
               <span class="form-name">Author: </span><input type="text" name="book[author]"class="form-control" id="inlineFormInput" placeholder="Author">
               <button type="submit" name="submit" class="btn btn-primary">Add To Your Stack</button>
             </form>
-            <button type="submit" id="clearSearch" name="submit" class="btn btn-info hidden">Return To Your Collection</button>
+            <button type="submit" id="clearSearch" name="submit" class="btn btn-info search">Return To Your Collection</button>
           </div>
         </div>
-
         <div class="row content" id="content">
         </div>
         <!-- <div class="row cartoon" id="cartoon">
@@ -191,7 +189,7 @@
           </div>
         </div>
        </div>
-       <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+       <!-- <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
           <div class="modal-content">
                <div class="modal-header">
@@ -207,7 +205,7 @@
                </form>
           </div>
         </div>
-       </div>
+       </div> -->
      </div>
    </body>
 </html>
