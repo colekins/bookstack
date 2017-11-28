@@ -18,6 +18,10 @@ body {
   float: right;
 }
 
+.logo {
+  height: 55px;
+}
+
 .searchButton {
   margin-left: 3px;
 }
@@ -35,7 +39,7 @@ body {
   text-align: center;
   font-size: 20px;
   color: white;
-  text-shadow: 0.5px 0.5px 2px Gray;
+  text-shadow: .5px .5px 2px Gray;
   margin-top: 4px;
   padding-top: 3.3px;
   padding-bottom: 3.3px;
