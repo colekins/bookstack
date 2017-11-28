@@ -40,15 +40,28 @@ const deleteSuccess = function (data) {
   $('#message').text('Book deleted.')
 }
 
+const restoreCovers = function () {
+  for (let i = 0; i < store.books.length; i++) {
+    const title = store.books[i].title
+    books.search(title, function (error, results) {
+      store.books[i].image = results[0].thumbnail
+      const err = error
+      setCover(store.books[i].id, store.books[i].image)
+    })
+  }
+}
+
 const searchSuccess = function () {
   $('#add-book').hide()
   showClearSearch()
+  restoreCovers()
 }
 
 const clearSearch = function () {
   $('#add-book').show()
   $('.search').hide()
   $('#message').html('<br>')
+  restoreCovers()
 }
 
 module.exports = {

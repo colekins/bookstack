@@ -57,8 +57,6 @@ const changePasswordFailure = function (error) {
 
 const setCover = function (id, img) {
   const panel = document.getElementsByClassName(id)
-  // const image = document.createElement('img')
-  // image.src = (img)
   const imageHtml = ("<img class='cover' src='" + img + "'>")
   $(panel).find('p').append(imageHtml)
 }
@@ -75,7 +73,7 @@ const populateSuccess = function (data) {
       const err = error
       setCover(store.books[i].id, store.books[i].image)
     })
-}
+  }
 }
 
 const loadCartoon = function (data) {

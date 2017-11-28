@@ -133,8 +133,7 @@ const onReadNext = function () {
   const booksHtml = booksTemplate({ books: onDeck })
   $('.content').text('')
   $('.content').append(booksHtml)
-  hide.toggleClearSearch()
-  hide.toggleAdd()
+  ui.searchSuccess()
 }
 
 const addHandlers = () => {
