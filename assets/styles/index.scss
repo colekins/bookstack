@@ -18,6 +18,10 @@ body {
   float: right;
 }
 
+.searchButton {
+  margin-left: 3px;
+}
+
 .cover {
   height: 220px;
 }
@@ -29,16 +33,16 @@ body {
 
 .message-bar{
   text-align: center;
-  font-size: 18px;
+  font-size: 19px;
   color: white;
   margin-top: 6px;
   padding-top: 5px;
   padding-bottom: 5px;
   background: #9cd9eb; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #9cd9eb, #64c2f1); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #9cd9eb, #64c2f1); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #9cd9eb, #64c2f1); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #9cd9eb, #64c2f1); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(left, #9cd9eb, #1499da); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #9cd9eb, #1499da); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #9cd9eb, #1499da); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #9cd9eb, #1499da); /* Standard syntax (must be last) */
 }
 
 a {
@@ -50,12 +54,26 @@ h4 {
   font-weight: bold;
 }
 
+.gradientTitle {
+background: -webkit-linear-gradient(#9cd9eb, #1499da);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 15px;
+}
+
 .caption {
   font-weight: 400;
 }
 
 .manage {
-  margin-top: -1.2px;
+  margin-top: -1px;
 }
 
 h3 {
@@ -80,6 +98,10 @@ h3 {
   margin: 0;
 }
 
+.question {
+  font-weight: 500;
+}
+
 .navbar {
   padding-bottom: 3px;
   padding-top: 11px;
@@ -87,13 +109,13 @@ h3 {
 }
 
 .navbar-brand {
-  font-size: 37px;
+  font-size: 42px;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .brand {
-  color: #1078ab;
+  color: #1289c4;
 }
 
 .jumbotron {
@@ -102,17 +124,18 @@ h3 {
   background: -o-linear-gradient(left, white, #eff8fb); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left, white, #eff8fb); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to left, white, #eff8fb);
-  min-height: 690px;
+  // min-height: 690px;
+  height: 770px;
 }
 
 .panel-manage {
-  height: 41px;
+  height: 39px;
 }
 
 
-#username {
-  font-weight: bold;
-}
+// #username {
+//   font-weight: bold;
+// }
 
 .search {
   display: none;
