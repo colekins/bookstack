@@ -2,6 +2,7 @@
 
 const store = require('../store')
 const booksTemplate = require('../templates/book-listing.handlebars')
+const books = require('google-books-search')
 
 const signUpSuccess = function (data) {
   $('#message').text('Signed up successfully! Please sign in.')
@@ -54,11 +55,27 @@ const changePasswordFailure = function (error) {
   console.log('changePassword failure ran. error is :', error)
 }
 
+const setCover = function (id, img) {
+  const panel = document.getElementsByClassName(id)
+  // const image = document.createElement('img')
+  // image.src = (img)
+  const imageHtml = ("<img class='cover' src='" + img + "'>")
+  $(panel).find('p').append(imageHtml)
+}
+
 const populateSuccess = function (data) {
   store.books = data.books
   const booksHtml = booksTemplate({ books: store.books })
   $('.content').append(booksHtml)
   $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
+  for (let i = 0; i < store.books.length; i++) {
+    const title = store.books[i].title
+    books.search(title, function (error, results) {
+      store.books[i].image = results[0].thumbnail
+      const err = error
+      setCover(store.books[i].id, store.books[i].image)
+    })
+}
 }
 
 const loadCartoon = function (data) {
