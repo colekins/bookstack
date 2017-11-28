@@ -35,7 +35,7 @@ body {
   text-align: center;
   font-size: 19px;
   color: white;
-  margin-top: 6px;
+  margin-top: 4px;
   padding-top: 1px;
   padding-bottom: 1px;
   background: #9cd9eb; /* For browsers that do not support gradients */
@@ -69,7 +69,8 @@ h6 {
 }
 
 .caption {
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 19px;
 }
 
 .manage {
@@ -109,7 +110,7 @@ h3 {
 }
 
 .navbar-brand {
-  font-size: 42px;
+  font-size: 44px;
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 500;
 }
@@ -120,12 +121,12 @@ h3 {
 
 .jumbotron {
   background: #eff8fb; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(right, white, #eff8fb); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left, white, #eff8fb); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left, white, #eff8fb); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to left, white, #eff8fb);
+  background: -webkit-linear-gradient(right, white, #edf7fa); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, white, #edf7fa); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, white, #edf7fa); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, white, #edf7fa);
   // min-height: 690px;
-  height: 820px;
+  height: 890px;
 }
 
 .panel-manage {

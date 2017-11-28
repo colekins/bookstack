@@ -22,7 +22,6 @@ const clearStore = function (id) {
     return book.id
   }).indexOf(parseInt(id))
   store.books.splice(index, 1)
-  console.log(store.books)
 }
 
 const onDeleteBook = function (event) {
@@ -105,9 +104,9 @@ const search = function (data) {
   $('.content').text('')
   $('.content').append(booksHtml)
   if (results.length === 1) {
-    $('#message').text('One result matching ' + data.terms + ' in your collection.')
+    $('#message').text('One result matching \'' + data.terms + '\' in your collection.')
   } else {
-    $('#message').text(results.length + ' results matching ' + data.terms + ' in your collection.')
+    $('#message').text(results.length + ' results matching \'' + data.terms + '\' in your collection.')
   }
   const form = document.getElementById('searchField')
   form.value = ''
@@ -140,6 +139,7 @@ const onReadNext = function () {
   }
   const booksHtml = booksTemplate({ books: onDeck })
   $('.content').text('')
+  $('#message').text('Here\'s whats on deck to read next!')
   $('.content').append(booksHtml)
   ui.searchSuccess()
 }
