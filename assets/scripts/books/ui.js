@@ -42,12 +42,12 @@ const deleteSuccess = function (data) {
 
 const restoreCovers = function () {
   for (let i = 0; i < store.books.length; i++) {
-    const title = store.books[i].title
-    books.search(title, function (error, results) {
-      store.books[i].image = results[0].thumbnail
-      const err = error
+  //   const title = store.books[i].title
+  //   books.search(title, function (error, results) {
+  //     store.books[i].image = results[0].thumbnail
+  //     const err = error
       setCover(store.books[i].id, store.books[i].image)
-    })
+    // })
   }
 }
 
