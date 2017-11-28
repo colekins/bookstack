@@ -36,7 +36,6 @@ const editBookSuccess = function (data) {
 }
 
 const deleteSuccess = function (data) {
-  // console.log(data)
   $('#message').text('Book deleted.')
 }
 

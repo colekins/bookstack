@@ -17,12 +17,20 @@ const onAddBook = function (event) {
     .catch(ui.addBookFail)
 }
 
+const clearStore = function (id) {
+  const index = store.books.map(function (book) {
+    return book.id
+  }).indexOf(parseInt(id))
+  store.books.splice(index, 1)
+  console.log(store.books)
+}
+
 const onDeleteBook = function (event) {
   event.preventDefault()
   const button = event.target
   const panel = button.parentElement.parentElement.parentElement
   const data = $(button).attr('data-id')
-  console.log(data)
+  clearStore(data)
   api.destroy(data)
     .then(ui.deleteSuccess)
     .then(panel.remove())
@@ -68,7 +76,7 @@ const onEditBook = function (event) {
     document.getElementById('edit-hidden').value = 0
   }
   data.book.next = boo
-  console.log(data.book)
+  // console.log(data.book)
   const bookTitle = currentPanel.firstChild
   const bookAuthor = bookTitle.nextSibling
   bookTitle.textContent = data.book.title
@@ -92,7 +100,7 @@ const search = function (data) {
       results.push(store.books[i])
     }
   }
-  console.log(results)
+  // console.log(results)
   const booksHtml = booksTemplate({ books: results })
   $('.content').text('')
   $('.content').append(booksHtml)

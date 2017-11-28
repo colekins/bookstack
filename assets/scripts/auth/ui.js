@@ -81,7 +81,6 @@ const populateSuccess = function (data) {
 const loadCartoon = function (data) {
   const imgLink = data[0].src
   const caption = data[0].caption
-  console.log(data[0])
   const imgHtml = ("<img class='cartoon' src='" + imgLink + "'>")
   const captionHtml = ("<br>" + caption)
   $('#cartoon').append(imgHtml)
