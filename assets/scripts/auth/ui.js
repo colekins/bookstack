@@ -17,10 +17,12 @@ const signUpFailure = function (error) {
 const signInSuccess = function (response) {
   $('#message').text('You\'re now signed in.')
   store.user = response.user
+  console.log(store.user)
   $('#loginModal').modal('hide')
   $('.showForUser').show()
   $('.cartoon').hide()
   $('.jumbotron').hide()
+  document.getElementById('sign-up').reset()
   $('#username').text(response.user.email)
 }
 
@@ -30,7 +32,7 @@ const signInFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('#message').text('You\'re now signed out.')
+  // $('#message').text('You\'re now signed out.')
   $('#content').html('')
   $('.showForUser').hide()
   $('.cartoon').show()
@@ -64,7 +66,13 @@ const populateSuccess = function (data) {
   store.books = data.books
   const booksHtml = booksTemplate({ books: store.books })
   $('.content').append(booksHtml)
-  $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
+  if (store.books.length === 0) {
+    $('#message').text('Welcome! Start adding to your collection below.')
+  } else if (store.books.length === 1) {
+    $('#message').text('Welcome! You have one book in your collection.')
+  } else {
+    $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
+  }
   for (let i = 0; i < store.books.length; i++) {
     const title = store.books[i].title
     books.search(title, function (error, results) {

@@ -10,7 +10,16 @@ const onSignUp = (event) => {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.signUp(data)
-    .then(ui.signUpSuccess)
+    .then(api.signUpSignIn)
+    .then(ui.signInSuccess)
+    .then(hide.toggleLogin)
+    .then(hide.togglePassword)
+    .then(hide.toggleSignout)
+    .then(hide.toggleSignup)
+    .then(hide.toggleSearch)
+    .then(hide.toggleReadNext)
+    .then(api.populate)
+    .then(ui.populateSuccess)
     .catch(ui.signUpFailure)
 }
 
@@ -73,6 +82,10 @@ const getCartoon = function () {
     .then(ui.loadCartoon)
 }
 
+const clearLoginMessage = function () {
+  $('#login-message').text('')
+}
+
 // const populateAlbums = function (data) {
 //   event.preventDefault()
 //   api.populate(data)
@@ -87,6 +100,7 @@ const addHandlers = () => {
   $('#clearSignup').on('click', onClearSignup)
   $('#clearLogin').on('click', onClearLogin)
   $('#clearPass').on('click', onClearPass)
+  $('#loginModal').on('hidden.bs.modal', clearLoginMessage)
 }
 
 module.exports = {
