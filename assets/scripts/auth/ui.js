@@ -5,9 +5,8 @@ const booksTemplate = require('../templates/book-listing.handlebars')
 const books = require('google-books-search')
 
 const signUpSuccess = function (data) {
-  $('#message').text('Signed up successfully! Please sign in.')
-  $('#signupModal').modal('hide')
-  // console.log('yoooooooo')
+  $('#message').text('Signed up successfully! Please login.')
+  document.getElementById('sign-up').reset()
 }
 
 const signUpFailure = function (error) {

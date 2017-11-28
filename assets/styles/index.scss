@@ -120,17 +120,22 @@ h3 {
 }
 
 .jumbotron {
-  background: #eff8fb; /* For browsers that do not support gradients */
+  background: #edf7fa; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(right, white, #edf7fa); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(left, white, #edf7fa); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(left, white, #edf7fa); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to left, white, #edf7fa);
   // min-height: 690px;
-  height: 890px;
+  height: 900px;
 }
 
 .panel-manage {
   height: 39px;
+}
+
+.splash-form {
+  width: 55%;
+  margin: 0, 40%, 0, 60%;
 }
 
 

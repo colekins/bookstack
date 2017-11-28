@@ -23,7 +23,19 @@
           <h1>Welcome to <span class="gradientTitle">BookStack</span></h1>
           <p><span class="question">Have you been acquiring books faster than you can read them lately?</span><br><br>Sign up for a <span class="question">BookStack</span> account today to begin tracking, organizing<br>and maintaining your book collection.
           In the meantime, please enjoy this<br>random cartoon to your right, courtesy of The New Yorker.</p>
-          <!-- <p><a class="btn btn-info btn-lg" href="#" role="button">Learn more</a></p> -->
+        <br>
+        <p>
+          <form id="sign-up">
+            <div class="form splash-form">
+              <input type="email" name="credentials[email]" id="sign-up-email" class="form-control" placeholder="Email">
+              <input type="password" name="credentials[password]" id="sign-up-password" class="form-control" placeholder="Password">
+              <input type="password" name="credentials[password_confirmation]" id="sign-up-password-confirmation" class="form-control" placeholder="Confirm Password">
+              <br>
+               <div class="modal-footer">
+                 <button type="submit" name="submit" class="btn btn-success btn-lg">Sign Up</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
       <div class="container">
@@ -70,7 +82,7 @@
                 </ul>
               </li>
               <li class="unhidden" id="showLogin" ><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-              <li class="unhidden" id="signup"><a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+              <!-- <li class="unhidden" id="signup"><a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li> -->
             </ul>
             <!-- <ul class="nav navbar-nav navbar-right hidden" id="showSearch">
               <li><input type="text" class="form-control" id="searchField" placeholder="Search"></li>
@@ -124,7 +136,7 @@
          </div>
        </div>
       </div>
-       <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+       <!-- <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
           <div class="modal-content">
                <div class="modal-header">
@@ -147,7 +159,7 @@
             </form>
           </div>
         </div>
-       </div>
+       </div> -->
        <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
           <div class="modal-dialog">
           <div class="modal-content">
