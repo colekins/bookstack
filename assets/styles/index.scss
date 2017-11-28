@@ -1,6 +1,10 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
 .content-area {
   padding-top: 115px;
   text-align: center;
@@ -26,10 +30,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 .message-bar{
   text-align: center;
   font-size: 18px;
-  font-weight: bold;
   color: white;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  margin-top: 6px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background: #9cd9eb; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #9cd9eb, #64c2f1); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(right, #9cd9eb, #64c2f1); /* For Opera 11.1 to 12.0 */
@@ -37,29 +41,32 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   background: linear-gradient(to right, #9cd9eb, #64c2f1); /* Standard syntax (must be last) */
 }
 
+a {
+  font-size: 17px;
+}
+
 h4 {
   text-align: center;
-  margin-top: -0px;
+  font-weight: bold;
+}
+
+.caption {
+  font-weight: 400;
+}
+
+.manage {
+  margin-top: -1.2px;
 }
 
 h3 {
   // overflow: hidden;
   white-space: nowrap;
-  font-size: 1.222vw;
+  font-size: 1.3vw;
 }
 
 .panel {
   text-align: center;
 }
-
-// .panel-custom > .panel-heading {
-//   background: #9cd9eb; /* For browsers that do not support gradients */
-//   background: -webkit-linear-gradient(left, #9cd9eb, #64c2f1); /* For Safari 5.1 to 6.0 */
-//   background: -o-linear-gradient(right, #9cd9eb, #64c2f1); /* For Opera 11.1 to 12.0 */
-//   background: -moz-linear-gradient(right, #9cd9eb, #64c2f1); /* For Firefox 3.6 to 15 */
-//   background: linear-gradient(to right, #9cd9eb, #64c2f1);
-//   color: white;
-// }
 
 .panel-default > .panel-heading {
   background: #eff8fb; /* For browsers that do not support gradients */
@@ -76,10 +83,26 @@ h3 {
 .navbar {
   padding-bottom: 3px;
   padding-top: 11px;
+  color: black;
 }
 
 .navbar-brand {
-  font-size: 33px;
+  font-size: 37px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 500;
+}
+
+.brand {
+  color: #1078ab;
+}
+
+.jumbotron {
+  background: #eff8fb; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(right, white, #eff8fb); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, white, #eff8fb); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, white, #eff8fb); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, white, #eff8fb);
+  min-height: 690px;
 }
 
 .panel-manage {
@@ -114,12 +137,12 @@ h3 {
 
 @media (max-width: 1090px) {
   h3 {
-    font-size: 14px;
+    font-size: 17px;
     }
 }
 
 @media (max-width: 766px) {
   h3 {
-    font-size: 18px;
+    font-size: 21px;
     }
 }

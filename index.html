@@ -6,6 +6,7 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,500,700" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -16,7 +17,7 @@
         <div class="container">
           <div class="cartoon">
             <div id="cartoon"></div>
-            <h4 id="caption"></h4>
+            <h4 id="caption" class="caption"></h4>
           </div>
           <h3></h3>
           <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
@@ -31,7 +32,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">BookStack</a>
+            <span class="navbar-brand"><span class="brand">BookStack</span></span>
           </div>
           <div class="collapse navbar-collapse">
             <!-- <ul class="nav navbar-nav">
@@ -82,7 +83,7 @@
       </div>
       <div class="content-area">
         <div class="panel panel-default showForUser" id="bookPanel">
-          <div class="panel-heading panel-manage"><h4>Manage Your BookStack</h4></div>
+          <div class="panel-heading panel-manage"><h4 class="manage">Manage Your BookStack</h4></div>
           <div class="panel-body">
             <form class="form-inline unhidden" id="add-book">
               <span class="form-name">Title: </span> <input type="text" name="book[title]" class="form-control" id="inlineFormInput" placeholder="Title">
