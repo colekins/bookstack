@@ -20,6 +20,7 @@ const signInSuccess = function (response) {
   $('#loginModal').modal('hide')
   $('.showForUser').show()
   $('.cartoon').hide()
+  $('.jumbotron').hide()
   $('#username').text(response.user.email)
 }
 
@@ -33,6 +34,7 @@ const signOutSuccess = function () {
   $('#content').html('')
   $('.showForUser').hide()
   $('.cartoon').show()
+  $('.jumbotron').show()
   store.user = null
 }
 
@@ -66,7 +68,7 @@ const loadCartoon = function (data) {
   const imgHtml = ("<img class='cartoon' src='" + imgLink + "'>")
   const captionHtml = ("<br>" + caption)
   $('#cartoon').append(imgHtml)
-  $('#cartoon').append(captionHtml)
+  $('#caption').append(captionHtml)
 }
 //
 // const albumCount = function () {
