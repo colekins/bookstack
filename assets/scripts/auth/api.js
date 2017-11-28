@@ -53,10 +53,18 @@ const populate = function () {
   })
 }
 
+const newYorkerCartoon = function () {
+  return $.ajax({
+    url: 'https://www.newyorker.com/cartoons/random/randomAPI1',
+    method: 'GET'
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
-  populate
+  populate,
+  newYorkerCartoon
 }

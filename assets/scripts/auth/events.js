@@ -68,6 +68,11 @@ const onClearPass = (event) => {
   document.getElementById('change-password').reset()
 }
 
+const getCartoon = function () {
+  api.newYorkerCartoon()
+    .then(ui.loadCartoon)
+}
+
 // const populateAlbums = function (data) {
 //   event.preventDefault()
 //   api.populate(data)
@@ -85,5 +90,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  getCartoon
 }

@@ -19,6 +19,7 @@ const signInSuccess = function (response) {
   store.user = response.user
   $('#loginModal').modal('hide')
   $('.showForUser').show()
+  $('.cartoon').hide()
   $('#username').text(response.user.email)
 }
 
@@ -31,6 +32,7 @@ const signOutSuccess = function () {
   $('#message').text('You\'re now signed out.')
   $('#content').html('')
   $('.showForUser').hide()
+  $('.cartoon').show()
   store.user = null
 }
 
@@ -56,6 +58,16 @@ const populateSuccess = function (data) {
   $('.content').append(booksHtml)
   $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
 }
+
+const loadCartoon = function (data) {
+  const imgLink = data[0].src
+  const caption = data[0].caption
+  console.log(data[0])
+  const imgHtml = ("<img class='cartoon' src='" + imgLink + "'>")
+  const captionHtml = ("<br>" + caption)
+  $('#cartoon').append(imgHtml)
+  $('#cartoon').append(captionHtml)
+}
 //
 // const albumCount = function () {
 //   if (store.albums.length === 0) {
@@ -75,5 +87,6 @@ module.exports = {
   signOutFailure,
   changePasswordSuccess,
   changePasswordFailure,
-  populateSuccess
+  populateSuccess,
+  loadCartoon
 }
