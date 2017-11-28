@@ -7,7 +7,7 @@ const bookEvents = require('./books/events')
 
 $(() => {
   authEvents.addHandlers()
-  // authEvents.getCartoon()
+  authEvents.getCartoon()
   bookEvents.addHandlers()
   setAPIOrigin(location, config)
 })

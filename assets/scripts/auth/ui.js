@@ -32,7 +32,7 @@ const signInFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  // $('#message').text('You\'re now signed out.')
+  $('#message').html('<br>')
   $('#content').html('')
   $('.showForUser').hide()
   $('.cartoon').show()

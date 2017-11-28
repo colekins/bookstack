@@ -33,19 +33,20 @@ body {
 
 .message-bar{
   text-align: center;
-  font-size: 19px;
+  font-size: 20px;
   color: white;
+  text-shadow: 0.5px 0.5px 2px Gray;
   margin-top: 4px;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 3.3px;
+  padding-bottom: 3.3px;
   background: #9cd9eb; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #9cd9eb, #1499da); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #9cd9eb, #1499da); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #9cd9eb, #1499da); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #9cd9eb, #1499da); /* Standard syntax (must be last) */
+  background: -webkit-linear-gradient(left, #9cd9eb, #1b96d2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #9cd9eb, #1b96d2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #9cd9eb, #1b96d2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #9cd9eb, #1b96d2); /* Standard syntax (must be last) */
 }
 
-a {
+li {
   font-size: 17px;
 }
 
@@ -55,9 +56,9 @@ h4 {
 }
 
 .gradientTitle {
-background: -webkit-linear-gradient(#9cd9eb, #1499da);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(#9cd9eb, #1499da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1 {
@@ -110,9 +111,9 @@ h3 {
 }
 
 .navbar-brand {
-  font-size: 44px;
+  font-size: 43px;
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .brand {
@@ -126,7 +127,7 @@ h3 {
   background: -moz-linear-gradient(left, white, #edf7fa); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to left, white, #edf7fa);
   // min-height: 690px;
-  height: 900px;
+  // height: 900px;
 }
 
 .panel-manage {
@@ -134,7 +135,7 @@ h3 {
 }
 
 .splash-form {
-  width: 52%;
+  width: 49%;
   margin: 0, 40%, 0, 60%;
 }
 

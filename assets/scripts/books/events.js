@@ -139,7 +139,7 @@ const onReadNext = function () {
   }
   const booksHtml = booksTemplate({ books: onDeck })
   $('.content').text('')
-  $('#message').text('Here\'s whats on deck to read next!')
+  $('#message').text('Here\'s whats on deck to read next.')
   $('.content').append(booksHtml)
   ui.searchSuccess()
 }
