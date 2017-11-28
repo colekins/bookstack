@@ -46,7 +46,7 @@ const restoreCovers = function () {
   //   books.search(title, function (error, results) {
   //     store.books[i].image = results[0].thumbnail
   //     const err = error
-      setCover(store.books[i].id, store.books[i].image)
+    setCover(store.books[i].id, store.books[i].image)
     // })
   }
 }

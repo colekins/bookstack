@@ -38,6 +38,12 @@ h4 {
   margin-top: -0px;
 }
 
+h3 {
+  // overflow: hidden;
+  white-space: nowrap;
+  font-size: 1.222vw;
+}
+
 .panel {
   text-align: center;
 }
@@ -88,4 +94,16 @@ h4 {
 .form-control {
   width: 78%;
   margin: 8px auto;
+}
+
+@media (max-width: 1090px) {
+  h3 {
+    font-size: 14px;
+    }
+}
+
+@media (max-width: 766px) {
+  h3 {
+    font-size: 18px;
+    }
 }
