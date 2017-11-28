@@ -18,6 +18,17 @@ body {
   float: right;
 }
 
+// .modal-backdrop {
+//   background-color: #9cd9eb;
+// }
+
+.modal {
+  position: fixed;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .logo {
   height: 55px;
 }
