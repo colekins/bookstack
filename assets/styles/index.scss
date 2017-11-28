@@ -2,15 +2,16 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 .content-area {
-  padding-top: 88px;
+  padding-top: 115px;
 }
 
 .message-bar{
-  // padding-top: 1px;
   text-align: center;
   font-size: 18px;
   color: white;
   background-color: #428bca;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 h4 {
@@ -22,8 +23,22 @@ h4 {
   text-align: center;
 }
 
-.searchButton {
-  margin-top: 8px;
+// .searchButton {
+//   margin-top: 10px;
+//   margin-left: -13px;
+// }
+
+.navbar-form {
+  margin: 0;
+}
+
+.navbar {
+  padding-bottom: 3px;
+  padding-top: 11px;
+}
+
+.navbar-brand {
+  font-size: 33px;
 }
 
 .panel-manage {
