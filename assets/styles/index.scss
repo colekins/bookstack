@@ -28,9 +28,13 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   font-size: 18px;
   font-weight: bold;
   color: white;
-  background-color: #428bca;
   padding-top: 6px;
   padding-bottom: 6px;
+  background: #9cd9eb; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #9cd9eb, #64c2f1); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #9cd9eb, #64c2f1); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #9cd9eb, #64c2f1); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #9cd9eb, #64c2f1); /* Standard syntax (must be last) */
 }
 
 h4 {
@@ -48,10 +52,22 @@ h3 {
   text-align: center;
 }
 
-// .searchButton {
-//   margin-top: 10px;
-//   margin-left: -13px;
+// .panel-custom > .panel-heading {
+//   background: #9cd9eb; /* For browsers that do not support gradients */
+//   background: -webkit-linear-gradient(left, #9cd9eb, #64c2f1); /* For Safari 5.1 to 6.0 */
+//   background: -o-linear-gradient(right, #9cd9eb, #64c2f1); /* For Opera 11.1 to 12.0 */
+//   background: -moz-linear-gradient(right, #9cd9eb, #64c2f1); /* For Firefox 3.6 to 15 */
+//   background: linear-gradient(to right, #9cd9eb, #64c2f1);
+//   color: white;
 // }
+
+.panel-default > .panel-heading {
+  background: #eff8fb; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #f5f5f5, #eff8fb); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #f5f5f5, #eff8fb); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #f5f5f5, #eff8fb); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #f5f5f5, #eff8fb);
+}
 
 .navbar-form {
   margin: 0;
@@ -67,7 +83,7 @@ h3 {
 }
 
 .panel-manage {
-  height: 32px;
+  height: 41px;
 }
 
 
