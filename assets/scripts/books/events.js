@@ -63,6 +63,8 @@ const openEdit = function (event) {
   } else {
     document.getElementById('edit-next').checked = true
   }
+  const date = current[0].created_at.toString().substring(0, 10)
+  $('#editCreated').text(date)
   const terms = titleArray.join('+')
   const amazonUrl = ('https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=' + terms)
   const grUrl = ('https://www.goodreads.com/search?q=' + terms)
