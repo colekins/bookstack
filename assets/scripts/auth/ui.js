@@ -17,7 +17,7 @@ const signUpFailure = function (error) {
 const signInSuccess = function (response) {
   $('#message').text('You\'re now signed in.')
   store.user = response.user
-  console.log(store.user)
+  // console.log(store.user)
   $('#loginModal').modal('hide')
   $('.showForUser').show()
   $('.cartoon').hide()

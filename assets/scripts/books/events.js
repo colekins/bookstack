@@ -48,7 +48,8 @@ const openEdit = function (event) {
   const bookAuthor = bookTitle.nextSibling
   currentPanel = panelTitle
   bookId = $(button).attr('data-id')
-  $('#edit-message').text(bookTitle.textContent + ' by ' + bookAuthor.textContent)
+  $('#editTitle').text(bookTitle.textContent)
+  $('#editAuthor').text(bookAuthor.textContent)
   document.getElementById('edit-title').value = bookTitle.textContent
   document.getElementById('edit-author').value = bookAuthor.textContent
   const current = store.books.filter(function (book) { return book.id == bookId })
