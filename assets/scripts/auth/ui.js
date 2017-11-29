@@ -73,16 +73,16 @@ const populateSuccess = function (data) {
   } else {
     $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
   }
-  // for (let i = 0; i < store.books.length; i++) {
-  //   const title = store.books[i].title
-  //   books.search(title, function (error, results) {
-  //     if (error) {
-  //       console.log(error)
-  //     }
-  //     store.books[i].image = results[0].thumbnail
-  //     setCover(store.books[i].id, store.books[i].image)
-  //   })
-  // } UNCOMMMENT
+  for (let i = 0; i < store.books.length; i++) {
+    const title = store.books[i].title
+    books.search(title, function (error, results) {
+      if (error) {
+        console.log(error)
+      }
+      store.books[i].image = results[0].thumbnail
+      setCover(store.books[i].id, store.books[i].image)
+    })
+  }
 }
 
 const loadCartoon = function (data) {
@@ -93,15 +93,6 @@ const loadCartoon = function (data) {
   $('#cartoon').append(imgHtml)
   $('#caption').append(captionHtml)
 }
-//
-// const albumCount = function () {
-//   if (store.albums.length === 0) {
-//   } else if (store.albums.length === 1) {
-//     $('#message').text('Welcome! You have 1 record in your collection.')
-//   } else {
-//     $('#message').text('Welcome back! There are ' + store.albums.length + ' albums in your collection.')
-//   }
-// }
 
 module.exports = {
   signUpSuccess,

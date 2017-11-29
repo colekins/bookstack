@@ -97,7 +97,7 @@ h6 {
 h3 {
   // overflow: hidden;
   white-space: nowrap;
-  font-size: 1.44vw;
+  font-size: 1.36vw;
 }
 
 .panel {
@@ -183,6 +183,12 @@ h3 {
 .form-control {
   width: 72%;
   margin: 5px auto;
+}
+
+@media (max-width: 1410px) {
+  h3 {
+      font-size: 1.59vw;
+    }
 }
 
 @media (max-width: 1090px) {

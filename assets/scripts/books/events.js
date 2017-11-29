@@ -53,7 +53,6 @@ const openEdit = function (event) {
   document.getElementById('edit-title').value = bookTitle.textContent
   document.getElementById('edit-author').value = bookAuthor.textContent
   const current = store.books.filter(function (book) { return book.id == bookId })
-  console.log(current[0])
   if (current[0].notes) {
     document.getElementById('edit-notes').value = current[0].notes
   } else {
