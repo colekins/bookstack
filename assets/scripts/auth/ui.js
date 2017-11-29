@@ -73,16 +73,16 @@ const populateSuccess = function (data) {
   } else {
     $('#message').text('Welcome back! You have ' + store.books.length + ' books in your collection.')
   }
-  for (let i = 0; i < store.books.length; i++) {
-    const title = store.books[i].title
-    books.search(title, function (error, results) {
-      if (error) {
-        console.log(error)
-      }
-      store.books[i].image = results[0].thumbnail
-      setCover(store.books[i].id, store.books[i].image)
-    })
-  }
+  // for (let i = 0; i < store.books.length; i++) {
+  //   const title = store.books[i].title
+  //   books.search(title, function (error, results) {
+  //     if (error) {
+  //       console.log(error)
+  //     }
+  //     store.books[i].image = results[0].thumbnail
+  //     setCover(store.books[i].id, store.books[i].image)
+  //   })
+  // } UNCOMMMENT
 }
 
 const loadCartoon = function (data) {

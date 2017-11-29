@@ -42,9 +42,9 @@ let currentPanel
 const openEdit = function (event) {
   event.preventDefault()
   const button = event.target
-  // const panel = button.parentElement.parentElement.parentElement
   const panelTitle = button.parentElement.previousSibling.previousSibling
   const bookTitle = panelTitle.firstChild
+  const titleArray = bookTitle.textContent.split(" ")
   const bookAuthor = bookTitle.nextSibling
   currentPanel = panelTitle
   bookId = $(button).attr('data-id')
@@ -63,6 +63,11 @@ const openEdit = function (event) {
   } else {
     document.getElementById('edit-next').checked = true
   }
+  const terms = titleArray.join('+')
+  const amazonUrl = ('https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=' + terms)
+  const grUrl = ('https://www.goodreads.com/search?q=' + terms)
+  $('#amazon-link').attr('href', amazonUrl)
+  $('#goodreads-link').attr('href', grUrl)
 }
 
 const onEditBook = function (event) {
