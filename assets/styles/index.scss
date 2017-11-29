@@ -208,3 +208,9 @@ h3 {
     font-size: 21px;
     }
 }
+
+@media (max-width: 520px) {
+  .content-area {
+    padding-top: 129px;
+  }
+}
