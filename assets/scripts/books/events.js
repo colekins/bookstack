@@ -65,7 +65,11 @@ const openEdit = function (event) {
   }
   const date = current[0].created_at.toString().substring(0, 10)
   $('#editCreated').text(date)
-  $('#editRating').val(current[0].rating)
+  if (current[0].rating > 0) {
+    $('#editRating').val(current[0].rating)
+  } else {
+    $('#editRating').get(0).selectedIndex = 0
+  }
   const terms = titleArray.join('+')
   const amazonUrl = ('https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=' + terms)
   const grUrl = ('https://www.goodreads.com/search?q=' + terms)
