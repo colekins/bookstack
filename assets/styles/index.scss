@@ -91,12 +91,32 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 200%;
+    height: inherit;
+  }
+
+  to {
+    margin-left: 0;
+    width: 100%;
+    height: inherit;
+  }
+}
+
 h1 {
   font-weight: 600;
 }
 
 h5 {
   font-size: 16px;
+}
+
+.title-animate {
+  overflow: hidden;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 h6 {
