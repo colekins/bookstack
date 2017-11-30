@@ -10,7 +10,7 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function (error) {
-  $('#signup-message').text('Error on sign up. Please try again.')
+  $('#message').text('Error on sign up. Please try again.')
   console.error(error)
 }
 
