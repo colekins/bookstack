@@ -65,6 +65,7 @@ const openEdit = function (event) {
   }
   const date = current[0].created_at.toString().substring(0, 10)
   $('#editCreated').text(date)
+  $('#editRating').val(current[0].rating)
   const terms = titleArray.join('+')
   const amazonUrl = ('https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Dstripbooks&field-keywords=' + terms)
   const grUrl = ('https://www.goodreads.com/search?q=' + terms)
@@ -82,7 +83,7 @@ const onEditBook = function (event) {
     document.getElementById('edit-hidden').value = 0
   }
   data.book.next = boo
-  // console.log(data.book)
+  data.book.rating = parseInt(data.book.rating)
   const bookTitle = currentPanel.firstChild
   const bookAuthor = bookTitle.nextSibling
   bookTitle.textContent = data.book.title
