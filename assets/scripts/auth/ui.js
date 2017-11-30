@@ -64,7 +64,6 @@ const setCover = function (id, img) {
 
 const populateSuccess = function (data) {
   store.books = data.books
-  console.log(store.books)
   const booksHtml = booksTemplate({ books: store.books })
   $('.content').append(booksHtml)
   if (store.books.length === 0) {

@@ -93,6 +93,7 @@ const onEditBook = function (event) {
   }).indexOf(parseInt(bookId))
   store.books[index].notes = data.book.notes
   store.books[index].next = data.book.next
+  store.books[index].rating = data.book.rating
   api.update(data, bookId)
     .then(ui.editBookSuccess)
   //   .then(document.getElementById('add-album').reset())
