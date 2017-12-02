@@ -4,7 +4,14 @@
 
 BookStack is an app for readers and bookworms! After signing up for an account, BookStack allows you to track your book collection and organize it with relevant information. For each entry, a user can store their rating and pertinent notes on the book. Users are also able to add the book to their 'Read Next' list, which makes it easy to keep track of what they plan on reading next. The app integrates with the [Google Books API](https://developers.google.com/books/) to dynamically populate book covers at user sign-in. Each book entry also provides external links to Amazon and Goodreads for the user's convenience. A powerful search function allows user to sift through their large collections.
 
-## Technologies
+![App Screenshot](https://i.imgur.com/55c6GVp.jpg)
+
+### Installation
+- Dependencies can be installed by running `npm install`
+- Development environment can be spun up by running `grunt serve`
+
+
+### Technologies
 
 - HTML
 - CSS/SASS
